@@ -1,0 +1,46 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Nacionalidade</title>
+</head>
+<body>
+
+    <h1>Nacionalidade</h1>
+
+    Digite sua Nacionalidade <input type="text" name="txtidioma" id="txtidioma"> <input type="button" value="Pesquisar" onclick="país()">
+
+    <div id="res"><p>Resultado</p></div>
+
+    <script>
+        function país() {
+
+            var tipo1 = document.querySelector('#txtidioma')
+            var result = document.querySelector('#res')
+            var nacional = (tipo1.value)
+            
+
+            result.innerHTML = `<p>Seu país é <strong>${nacional}</strong></p>`
+
+           if (nacional == 'Brasil') {
+
+            result.innerHTML += `Você é Brasileiro`
+        }
+            else {
+                
+                result.innerHTML += `Vc é estrangeiro`
+            
+            }
+          
+
+         
+        }
+    </script>
+
+    
+</body>
+</html>
