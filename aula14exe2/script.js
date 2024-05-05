@@ -1,30 +1,26 @@
 function tabuada() {
-    var num = document.getElementById('txtn')
-    var tab = document.getElementById('seltab')
+    var num = document.querySelector('#txtn')
+    var tab = document.querySelector('#seltab')
 
     if (num.value.length == 0) {
 
-        alert('Favor digitar um número para Tabuada')
-
-    } else {
+        alert('Favor digitar um numero para tabuada')
         
-        var n = Number(num.value)
-        var c = 1
-        tab.innerHTML = ''
-      //  while (c <= 10) {
+    }else {
 
-      //  var item = document.createElement(`option`)
-      //  item.text = `${n} x ${c} = ${n * c} `
-     //   tab.appendChild(item)
-     //   c = c + 1
+    var n = Number(num.value)
+    c = 1
+    tab.innerHTML = ``
 
-     for ( c <=10;) {
+    while (c <= 10 ) {
 
-             var item = document.createElement(`option`)
-            item.text = `${n} x ${c} = ${n * c}`
-            tab.appendChild(item)
-     }
-
-        }
-
+        var item = document.createElement(`option`)
+        item.text = `${n} x ${c} = ${n*c}`
+        tab.appendChild(item)
+        c++
     }
+
+}
+
+
+}
