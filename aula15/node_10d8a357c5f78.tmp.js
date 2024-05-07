@@ -1,10 +1,10 @@
 let num = [5,8,2,9,3]
-num.sort()
+var c = 0
+for ( var pos = 0; pos <= 4 ; c++) {
 
-
-for (var pos  in num) {
        console.log(num[pos])
-} 
+
+}
 
 
 
