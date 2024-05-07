@@ -1,39 +1,39 @@
-function contar() {
-    var ini = document.getElementById('txti')
-    var fim = document.getElementById('txtf')
-    var pass = document.getElementById('txtp')
-    var res = document.getElementById('res')
+function conte () {
+    var ini = document.querySelector('#txti')
+    var fim = document.querySelector('#txtf')
+    var pass = document.querySelector('#txtp')
+    var res =  document.querySelector('#res')
 
     if (ini.value.length == 0 || fim.value.length == 0 || pass.value.length == 0) {
 
-        alert('[ERRO] - Dados Incompletos')
-    } else {
-        res.innerHTML = 'Contando ... '
+        alert('[ERRO] - Favor Digitar os Dados')
+        
+    }else {
+        res.innerHTML = 'Contando . . . '
 
-    var i = Number(ini.value)
-    var f = Number(fim.value)
-    var p = Number(pass.value)
+        var i = Number(ini.value)
+        var f = Number(fim.value)
+        var p = Number(pass.value)
 
-    if ( p <= 0) {
-        p = 1
-       
-        alert('Passos Invalidos. Será considerando o passo 1 ')
-    }
+        if ( p <= 0) {
 
-    if (i < f) {
-        for (var c = i ; c <= f ; c = c + p) {
+            alert('Passo invalido, será considerado passo 1'  )
 
-            res.innerHTML += ` ${c} \u{1f9b6}`
+            p = 1 
+
         }
-    } else {
-        for (var c = i ; c >= f ; c = c - p) {
-            res.innerHTML += `${c} \u{1f9b6}`
+
+
+        if (i <= f) {
+
+            for (var c = i ; c <= f ; c = c + p )
+
+                res.innerHTML += `${c} \u{1f449}`
+        }else {
+            for (var c = i ; c >= f ; c = c - p)
+
+                res.innerHTML += `${c} \u{1f449}`
         }
+        res.innerHTML += `\u{1f448}`
     }
-
-    res.innerHTML += `${c} \u{1f3c1}`
-    }
-
-
 }
-
