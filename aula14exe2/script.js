@@ -1,22 +1,23 @@
 function tabuada() {
-    var num = document.querySelector('#txtn')
-    var tab = document.querySelector('#seltab')
 
-    if (num.value.length == 0 ) {
+    let num = document.querySelector('#txtn')
+    let tab = document.querySelector('#seltab')
 
-        alert('Por favor digite um numero para tabuada')
+    if (num.value == 0) {
 
-    }else {
-        var n = Number(num.value)
-        var c= 1
-        tab.innerHTML = " "
-
-        while (c <= 10){
-            var item = document.createElement('option')
-            item.text = `${n} x ${c} = ${n*c}`
-            tab.appendChild(item)            
-            c = c + 1
-        }
-
+        alert('Por favor digite um numero')
     }
+    else {
+
+       var c = 1
+       tab.innerHTML = ''
+        while (c <= 10) {
+            var n = Number(num.value)
+            var item = document.createElement('option')
+             item.text = `${n} x ${c} = ${n*c}`
+             tab.appendChild(item)
+             c = c + 1 
+        }
+    }
+
 }
