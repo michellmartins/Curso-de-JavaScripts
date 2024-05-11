@@ -4,21 +4,20 @@ function tabuada() {
     let tab = document.querySelector('#seltab')
 
     if (num.value.length == 0) {
+        alert('Favor digite um numero para tabuada')
 
-        alert('Favor digitar um numero para tabuada')
-
-    }
-    else {
-
-        var c = 1
+    } else {
+        let n = Number(num.value)
+        let c = 1
         tab.innerHTML = " "
-        while (c <= 10){
 
-            var n = Number(num.value)
-            var item = document.createElement('option')
-            item.text = `${n} x ${c} = ${c * n}`
+        while (c <= 10) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n * c}`
             tab.appendChild(item)
-            c = c + 1 
+            c = c + 1
         }
     }
 }
+
+
