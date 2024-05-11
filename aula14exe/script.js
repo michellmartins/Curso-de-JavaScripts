@@ -1,49 +1,40 @@
-function conte() {
+function conte () {
+     let ini = document.querySelector('#txti')
+     let fim = document.querySelector('#txtf')
+     let pass = document.querySelector('#txtp')
+     let res = document.querySelector('#res')
+     if (ini.value.length == 0 || fim.value.length == 0 || pass.value.length == 0) {
 
-    let ini = document.querySelector('#txti')
-    let fim = document.querySelector('#txtf')
-    let pass = document.querySelector('#txtp')
-    let res = document.querySelector('#res')
+        alert ('ERRO - Favor digitar os dados')
+ }   
+    else {
+        
+        res.innerHTML = 'Contando . . . '
 
-    if (ini.value.length == 0 || fim.value.length == 0 || pass.value.length == 0) {
-
-        alert('Erro - Dados invalidos')
-    } else {
-        res.innerHTML = 'Contando ...'
-
-        let i = Number(ini.value)
-        let f = Number(fim.value)
-        let p = Number(pass.value)
+    let i = Number(ini.value)
+    let f = Number(fim.value)
+    let p = Number(pass.value)
+    let c = 1 
 
         if (p <= 0) {
 
-            alert('Passo invalido , sera considerado o passo 1')
-            p= 1
+            alert ('Passo invalido, será valido o passo 1')
+            p = 1
         }
+        if (i < f) {
 
-        if (i <= f) {
-
-            for (var c = i; c <= f; c = c + p) {
-
-                res.innerHTML += `${c}\u{1f7e2}` 
-            }
-            } else {
+            for (c = i; c <= f ; c = c + p) {
                 
-                for (var c = i; c >= f; c = c - p) {
-
-                    res.innerHTML += `${c}\u{1f534}`
-                }
+                
+                res.innerHTML += `${c} \u{1f7e2}`
             }
+        } else {
+            for (c = i ; c >= f ; c = c -p) {
 
-
+                res.innerHTML += `${c} \u{1f534}`
+            }
         }
 
-
-
-
-
-
-    }
-
-
-
+        res.innerHTML += `\u{1f534}`
+}  
+}
