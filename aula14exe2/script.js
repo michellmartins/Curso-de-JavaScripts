@@ -1,25 +1,26 @@
 function tabuada() {
-    let num = document.querySelector('#txtn')
+
+    let num = document.querySelector("#txtn")
     let tab = document.querySelector('#seltab')
 
     if (num.value.length == 0) {
 
-        alert('Por favor , digite um numero')
+        alert('Favor um digitar um numero para tabuada')
+
+    
     } else {
 
         let n = Number(num.value)
-        c = 1
+        let c = 1
         tab.innerHTML = " "
-        
-        
 
-        while (c <= 10) {
+        while (c <= n) {
 
             let item = document.createElement('option')
-            item.text = `${n} x ${c} = ${n * c}`
+            item.text = `${n} x ${c} = ${c*n}`
             tab.appendChild(item)
-            c = c + 1
-
+            c++
         }
+
     }
 }
