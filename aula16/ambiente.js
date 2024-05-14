@@ -1,11 +1,14 @@
-function parimpar (dado) {
+let res = parimp(10)
 
-    if (dado % 2 == 0) {
-        return('PAR')
+function parimp(n) {
+
+    if (n%2 == 0 ) {
+        return 'Par'
+
+    }else {
+        return 'Impar'
     }
-    else {
-        return('IMPAR')
-    }
+
 }
 
-    console.log(parimpar(10))
+console.log(res)

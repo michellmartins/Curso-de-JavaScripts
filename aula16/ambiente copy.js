@@ -1,6 +1,7 @@
-function soma(m,n) {
+let soma = dois(1,7) 
 
-    return m + n         
+function dois(n=0 , m = 0) {
+   return n + m
 }
 
-console.log (4)
+console.log(soma)
