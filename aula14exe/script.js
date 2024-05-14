@@ -17,7 +17,14 @@ function contador () {
     let f = Number(fim.value)
     let p = Number(pass.value)
 
-    if (p <)
+    res.innerHTML = ' '
+    
+    if (p <= 0) {
+
+        alert('Passo invalido , favor considerar passo 1')
+        p = 1
+        
+    }
 
     if (i < f) {
 
