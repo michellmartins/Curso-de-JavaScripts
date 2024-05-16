@@ -1,0 +1,19 @@
+//fatorial de um numero 
+
+// 5! = 5 x 4 x 3 x 2 x 1 
+
+function fatorial(n) {
+
+    let fat = 1
+
+    for (c = n ; c > 1 ; c = c - 1 ) {
+
+       fat = fat * c 
+    }
+    return fat
+}
+    console.log(`5! = 5 x 4 x 3 x 2 x 1 = ${fatorial(5)}`)
+
+
+
+    
