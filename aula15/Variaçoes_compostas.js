@@ -1,14 +1,12 @@
-let nome = ['Liduina','Martins', 'Priscila','Allan']
-console.log(`O Vetor acima possui ${nome.length} nomes`)
+let nome = ['Erick' , 'João Victor', 'Allana', 'Milena']
 
-let dados = nome
-dados.sort()
+console.log(`Liduina e Martins , tiveram ${nome.length} Netos`)
 
-for (dados = 0 ; dados < nome.length ; dados = dados + 1 ) {
+dados = nome
+console.log (`Desses ${nome.length} netos `)
+for (dados = 0; dados < nome.length ; dados ++) {
 
-   
-    soma = dados + 1
-    console.log (`${nome[dados]} esta na posição ${soma}`)
-
+     dados + 1 
+    console.log(`O ${pos}º foi ${nome[dados]}` )
 
 }

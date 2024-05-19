@@ -10,4 +10,4 @@ function fatorial(n) {
 
 
 }
-    console.log(fatorial(1))
+    console.log(fatorial(100))

@@ -1,17 +1,18 @@
-let item = 51
+let num = 2
 
-let numero = parimpar(item)
+let dado = num
+function parimpar(num) {
 
-function parimpar(numero) {
+    if (num % 2 == 0) {
 
-    if ( numero%2 == 0 ) {
-
-        return "Par"
-
-    }else {
-
-        return "Impar"
+        return 'Par'
     }
+    
+    else {
+
+        return 'IMpar'
+    }
+ 
 }
 
-console.log(`Número ${item}, é um Numero ${numero}`)
+console.log (`O ${num} é ${parimpar(dado)}`)
