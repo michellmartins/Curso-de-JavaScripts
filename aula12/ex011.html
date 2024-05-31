@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTAÇÃO</title>
+</head>
+
+<body>
+    <h1> CHEQUE SUA IDADE PARA VOTAÇÃO</h1>  
+
+   
+    <p>Qual o seu nome ? <input type="texto" id="txtn"><br><br>
+    Qual a sua idade ? <input type="number" id="idade">
+    <input type="button" value="Verificar" onclick="checar()"></p>
+
+ 
+
+    <div id="res">
+
+        <p>Resultado
+
+
+    </div>
+
+    <script>
+
+      
+        function checar() {
+
+            let nome = document.querySelector('#txtn')
+            let idade = document.querySelector('#idade')
+            let res = document.querySelector('#res')
+            var agora = new Date()
+            var hora = agora.getHours()
+
+            res.innerHTML = " "
+
+            res.innerHTML += `<p> São ${hora} horas `
+            res.innerHTML += `<p> Olá ${nome.value}, tudo bem, Você possui ${idade.value} anos` 
+            
+
+            if (idade.value <= 0) {
+
+                alert('Favor digitar sua Idade')
+
+            } else if (idade.value < 16) {
+
+                res.innerHTML += " <p>Você não pode Votar "
+
+
+            } else if (idade.value < 18 || idade.value >= 65) {
+
+                res.innerHTML += " <p> Seu Voto é Opcional"
+
+
+            } else {
+
+                res.innerHTML += " <p> Seu Voto é Obrigatório"
+
+
+            }
+            nome.value = " "
+            idade.value = " "
+            idade.focus()
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

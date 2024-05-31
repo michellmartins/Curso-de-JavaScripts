@@ -5,4 +5,4 @@ if (vel > 60) { // condição simples
     console.log(`Você ultrapassou a velocidade permitada. MULTADO`)
 
 }
-console.log(`Dirija com cuidado`)
+console.log(`Dirija com cuidado`) 

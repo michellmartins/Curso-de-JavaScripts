@@ -1,20 +1,9 @@
-var idade = 42
+//Abaixo de 16 anos nao vota
+//entre 16 e 18 anos voto opcional
+//entre 18 a 65 anos voto obrigatorio
+//65 acima voto opcional
 
-console.log('IDADE PARA VOTAR')
+console.log('*****IDADE PARA VOTAR*******')
 
-console.log(`Sua idade é ${idade} anos`)
-
-if (idade < 16) 
-
-    console.log(`Não vota`)
-
-    else if (idade <= 18 || idade > 65)
-
-    console.log(`Voto Opcional`)
-
-        else
-
-        console.log(`Voto Obrigatório`)
-
- 
+let idade = prompt( 'Favor digite sua idade ?') 
 

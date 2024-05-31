@@ -1,7 +1,8 @@
 // var hora = 22
+var agora = new Date()
+var hora = agora.getHours()
 
 
-var hora = 19
 
 
 console.log(`Agora são exatamente ${hora} Horas`)

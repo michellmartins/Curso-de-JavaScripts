@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <h1> Nacionalidade</h1>
+
+    Qual o seu país<input type="text" id="idioma">
+    <input type="button" value="Verificar" onclick="checar()">
+
+    <div id="res">
+
+        <p>Resultado
+
+
+    </div>
+
+    <script>
+
+
+
+        function checar() {
+
+            let pais = document.querySelector('#idioma')
+            let res = document.querySelector('#res')
+            res.innerHTML = " "
+
+
+            if (pais.value == Number(pais.value)) {
+
+                alert(' Favor Digitar seu País')
+
+            }else if (pais.value == 'Brasil') {
+
+                    res.innerHTML += "<p>Vc é Brasileiro"
+
+                } else {
+
+                    res.innerHTML += "<p> Vc é Estrangeiro"
+                } 
+
+            }
+
+
+            pais.value = " "
+            pais.focus()
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
