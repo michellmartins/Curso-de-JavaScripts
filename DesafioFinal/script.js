@@ -6,84 +6,95 @@ let valores = []
 
 function insNumero(n) {
 
-    if (Number(n) > 1 && Number(n) < 100) {
+    if (Number(n) >= 1 && Number(n) <= 100) {
 
         return true
-
     }else {
 
         return false
     }
 }
 
-function insLista (n,l) {
+function insLista(n,l) {
 
-    if (l.indexOf(Number(n)) != -1) {
+    if (l.indexOf(Number(n)) != -1)   {
 
         return true
-    }else {
+} else {
 
-         return false
-    }
+        return false
+}
 
 }
-function analisar () {
 
-    if ( insNumero(num.value) && !insLista(num.value,valores)) {
+function analisar() {
 
-        valores.push(Number(num.value))
+    if (insNumero(num.value) && !insLista(num.value,valores)) {
+        
+        valores.push(Number(num.value)) 
+
         let item = document.createElement('option')
-        item.text = `O valor ${num.value}`
-        lista.appendChild(item)
-        res.innerHTML = " "
+        item.text = (`O valor inserido foi ${num.value}`)
+        lista.appendChild(item) 
+        res.innerHTML = ' '
 
 
-    }else { 
 
-        alert ('Numero Invalido ou ja Inserido')
-    }
+} else {
 
-    num.value = " "
-    num.focus()
+        alert ( 'Valor ja inserido ou Invalido')
+}
+num.value = " "
+num.focus()
 }
 
 function finalizar () {
 
-    if ( valores.length == 0 ){
+        if (valores.length == 0 ) {
 
-        alert ('Favor inserir de 1 a 100')
-    } else {
+            alert ( 'Favor digitar ente 1 a 100') 
+        
+        } else {
 
-        let total = valores.length
-        let maior = valores[0]
-        let menor = valores[0]
-        let soma = 0
-        let media = 0
+            let total = valores.length
+            let maior = valores[0]
+            let menor = valores [0]
+            let soma = 0
+            let media = 0
 
-        for (let pos in valores) {
-            if ( valores[pos] > maior) {
+            for ( let pos in valores) {
 
-                maior = valores[pos] }
-            if (valores[pos] < menor  ) {
-                
-                menor = valores[pos]
+                if (valores[pos] > maior) {
+
+                    maior = valores[pos]
+                }
+                if (valores[pos] < menor) {
+
+                    menor = valores[pos] 
+
+                }
+
+                soma = soma + valores[pos]
+                media = soma / total
+
+                }
+
+            res.innerHTML = " "  
+            res.innerHTML += `<p>Os numeros digitados foram ${total}`
+            res.innerHTML += `<p>O maior numero é ${maior}`
+            res.innerHTML += `<p>O menor numero é ${menor}`
+            res.innerHTML += `<p>A soma dos valores ${soma}`
+            res.innerHTML += `<p>A média dos valores é ${media}`
+            res.innerHTML += `<p> os valores digitados foram ${valores}`
+
+
             }
 
-            soma = soma + valores[pos]
-            media = soma / total
+
+
+
+
+
+
 
         }
-
-        res.innerHTML = " "
-        res.innerHTML += `<p> O valor de numeros digitados foram ${total}`
-        res.innerHTML += `<p> O maior valor é ${maior}`
-        res.innerHTML += `<p> O menor valor é ${menor}`
-        res.innerHTML += `<p> A soma dos valores é ${soma}`
-        res.innerHTML += `<p> A media dos valores é ${media}`
-
-
-
-
-    }
-
-}
