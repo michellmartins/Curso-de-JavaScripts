@@ -9,7 +9,7 @@ function chamada() {
 
         alert('[ERRO} Verifique os dados e tente novamente')
 
-    else
+    else 
 
         var fsex = document.getElementsByName('sexo')
     var idade = ano - fano.value
