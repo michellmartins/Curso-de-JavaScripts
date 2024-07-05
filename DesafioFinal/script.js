@@ -1,10 +1,17 @@
+let megaSena = [ 23,10,5,15,12,34]
+let jogados = [1,98,15,11,9,32]
+let acertou = []
 
-let tab = [3, 7] 
-let multi = [1,2,3,4,5,6,7,8,9,10]
+for (indexM = 0 ; indexM < megaSena.length ; indexM++) {
+  for (indexJ = 0; indexJ < jogados.length ; indexJ++) {
 
-for (indexT = 0 ; indexT < tab.length ; indexT++) {
-  
-  for ( indexM = 0 ; indexM < multi.length ; indexM++) 
+    if (megaSena[indexM] == jogados[indexJ]) {
 
-    console.log(`${tab[indexT]} x ${multi[indexM]} = ${tab[indexT]*multi[indexM]}`)
+      acertou.push(megaSena[indexM])
+
+    }
+  }
+
 }
+
+console.log(`${acertou}`)
