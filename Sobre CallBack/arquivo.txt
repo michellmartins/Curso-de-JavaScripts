@@ -1,0 +1,7 @@
+“Primeiro comando.”
+
+“Segundo comando.”
+
+“Terceiro comando.”
+
+“Olá, esse é o conteúdo do arquivo!”
