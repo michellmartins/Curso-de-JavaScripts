@@ -67,9 +67,88 @@ const sorteado = numSorteio.sort((a,b) => a - b)
 
 console.log("Numeros desordenados:", `${sorteado.join(' - ')}`) */
 
-const valores = ["Joana", "José", "Maria", 5, 6, 10, 12, 20]
+/* const valores = ["Joana", "José", "Maria", 5, 6, 10, 12, 20]
 
-console.log(valores.splice(4))
+console.log(valores.splice(4)) */
+
+/*const itens = ["Banana", "Macarrão", "Arroz", "Feijão", "Carne", "Tomate", "Laranja"]
+
+console.log("array original", itens)
+
+itens.push("Suco de uva")
+
+console.log("Array adicionando novo produto" , itens) */
+
+/*const names = ['Maria', 'João', 'Gabriela', 'Gabriel', 'Mariana', 'Matheus']
+const lastItem = names.pop()
+
+console.log('Array original sem o uso do metodo Pop()', names)
+
+console.log('Ultimo nome do array:', lastItem) */
+
+/*const numbers = [1, 8, 9, 7, 3]
+
+const firstNumber = numbers.shift()
+
+console.log('Array original:', numbers)
+console.log('Array usando o método:', firstNumber)*/
+
+/*const alunos = ['Joaquim', 'Joana', 'José', 'Jasmim', 'Jardirei'];
+
+alunos.unshift("João", "Jonas");
+
+console.log("Array de alunos:", alunos)*/
+
+/*const array = [10, 14, 21, 35, 1, 3, 5, 77, 84, 42, 444, 724, 49, 8, 11, 2, 6]
+
+console.log(array.indexOf(10))
+
+console.log(array.indexOf(84))
+
+console.log(array.indexOf(6))
+
+console.log(array.indexOf(1111))
+
+console.log(array.indexOf(101)) */
+
+/*const frase = "Eu estou aprendendo sobre lastIndexOf()"
+
+console.log(frase.lastIndexOf('aprendendo')) */
+
+/*var nomes = ['Silvia', 'Carlos', 'João', 'Maria', 'Paulo', 'Pedro'];
+var nomesComP = nomes.filter(nome => nome.charAt(0) == "P" );
+console.log(nomesComP);
+// saída: [ 'Paulo', 'Pedro' ] */
+
+
+/* var listaNomes = [ 'Silvia', 'Carlos', 'João', 'Maria', 'Paulo', 'Pedro' ];
+var nomesMaiuscula = listaNomes.map(nome => nome.toUpperCase());
+console.log(nomesMaiuscula);
+// saída: [ 'SILVIA', 'CARLOS', 'JOÃO', 'MARIA', 'PAULO', 'PEDRO' ] */
+
+/*var listaMeninas = ["Silvia", "Maria", "Joana"];
+var listaMeninos = ["João", "Paulo", "Pedro"];
+var listaPessoas = listaMeninas.concat(listaMeninos);
+console.log(listaPessoas);
+// saída: [ 'Silvia', 'Maria', 'Joana', 'João', 'Paulo', 'Pedro' ]
+var listaPessoas2 = listaMeninos.concat(listaMeninas);
+console.log(listaPessoas2);
+// saída: [ 'João', 'Paulo', 'Pedro', 'Silvia', 'Maria', 'Joana' ] */
+
+const array = [10, 22, 14, 30, 2];
+
+const result = array.reduce(function(result, array){
+  return result + array;
+}, 0);
+
+console.log(result)
+
+
+
+
+
+
+
 
 
 
