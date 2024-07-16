@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Java Script map()</title>
+</head>
+<body>
+
+    <form  method="post">
+
+        <input type="checkbox" id="chkGeladeira" value="Geladeira"> Geladeira<br />
+        <input type="checkbox" id="chkFogão" value="Fogão"> Fogão <br />
+        <input type="checkbox" id="chkCoifa" value="Coifa"> Coifa<br />
+        <input type="button" id="btnSubmit" onclick="exibirSelecionados()" value="Exibir Itens Selecionados" /> <br />
+    </form>
+
+    <p id="resultado" ></p>
+
+    <script type="text/javascript">
+    
+    function exibirSelecionados() {
+
+        let elementos = document.querySelectorAll(' input[type=checkbox]:checked')
+
+        let itensSelecionados = [].map.call(elementos, elemento => {
+            
+            return elemento.value
+        })
+    
+        document.querySelector('#resultado').innerHTML = `Você selecionou: ${itensSelecionados.join(" - ")}`
+    }
+    
+    
+    </script>
+    
+</body>
+</html>

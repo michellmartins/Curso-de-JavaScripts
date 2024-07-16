@@ -23,7 +23,7 @@ exibeMensagensNaOrdem('Essa é a primeira mensagem exibida na ordem', function()
 }); */
 
 
-var fs = require('fs'); 
+/*var fs = require('fs'); 
 console.log("Primeiro comando");
 fs.readFile('./arquivo.txt', callback);
 function callback(err, conteudo){
@@ -31,4 +31,23 @@ function callback(err, conteudo){
     console.log(String(conteudo));
 }
 console.log("Segundo comando");
-console.log("Terceiro comando");
+console.log("Terceiro comando");*/
+
+
+function soma (a,b) {
+
+    let op = a + b 
+    console.log(op)
+    }
+
+    function multiplicacao (a,b) {
+
+        let op = a * b 
+        console.log(op)
+    }
+soma(2,2)
+
+multiplicacao(2,4)
+
+
+
