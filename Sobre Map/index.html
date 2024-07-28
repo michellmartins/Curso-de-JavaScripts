@@ -12,6 +12,7 @@
         <input type="checkbox" id="chkGeladeira" value="Geladeira"> Geladeira<br />
         <input type="checkbox" id="chkFogão" value="Fogão"> Fogão <br />
         <input type="checkbox" id="chkCoifa" value="Coifa"> Coifa<br />
+        <input type="checkbox" id="chkCoifa" value="Boca"> Boca<br />
         <input type="button" id="btnSubmit" onclick="exibirSelecionados()" value="Exibir Itens Selecionados" /> <br />
     </form>
 
@@ -21,7 +22,7 @@
     
     function exibirSelecionados() {
 
-        let elementos = document.querySelectorAll(' input[type=checkbox]:checked')
+        let elementos = document.querySelectorAll('input[type=checkbox]:checked')
 
         let itensSelecionados = [].map.call(elementos, elemento => {
             
