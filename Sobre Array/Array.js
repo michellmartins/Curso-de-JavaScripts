@@ -56,7 +56,7 @@ valores.forEach((valor, index) => {
 console.log("Array original : ", `${nomes}`)
 
 const nomesOrdenados = nomes.sort()
-console.log("Array em ordem alfabetica :", `${nomesOrdenados}`) */
+console.log("Array em ordem alfabetica :", `${nomesOrdenados.join(' - ')}`) */
 
 
 /* const numSorteio =  [10, 6, 23, 68, 92, 11, 4,100, 29, 7, 3, 99, 1, 2, 3, 20, 22, 23, 49, 90]
@@ -86,12 +86,15 @@ console.log('Array original sem o uso do metodo Pop()', names)
 
 console.log('Ultimo nome do array:', lastItem) */
 
-/*const numbers = [1, 8, 9, 7, 3]
+const numbers = [1, 8, 9, 7, 3]
+
+let origem = numbers
 
 const firstNumber = numbers.shift()
 
-console.log('Array original:', numbers)
-console.log('Array usando o método:', firstNumber)*/
+console.log('Array original:', origem)
+console.log('Array sem o 1:', numbers)
+console.log('Array usando o método:', firstNumber)
 
 /*const alunos = ['Joaquim', 'Joana', 'José', 'Jasmim', 'Jardirei'];
 
