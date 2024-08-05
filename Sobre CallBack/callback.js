@@ -47,7 +47,7 @@ function soma (a,b) {
     }
 soma(2,2)
 
-multiplicacao(2,4)
+multiplicacao(2,4) 
 
 
 
