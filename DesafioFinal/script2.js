@@ -1,21 +1,14 @@
-let filhos = [ 'Michell', 'Allan', 'Priscilla']
-
-let netos = [ 'Erick', 'João Victor' , 'Milena' , 'Michell']
-
-let naoNeto = []
+let mult = [3, 7] 
+let segundo = [1,2,3,4,5,6,7,8,9,10]
 
 
-for ( indexFilhos = 0 ; indexFilhos < filhos.length ; indexFilhos++)  {
 
-    for (indexNetos = 0 ; indexNetos < netos.length ; indexNetos++)   {
+for (indexMulti = 0 ; indexMulti < mult.length ; indexMulti++) {
 
-        if (filhos[indexFilhos] === netos[indexNetos]) {
 
-            naoNeto.push(filhos[indexFilhos])
-            
-        }
+    for (indexSeg = 0 ; indexSeg < segundo.length ; indexSeg++) {
 
- }
+        
+    console.log(`${mult[indexMulti]} x ${segundo[indexSeg]} = ${mult[indexMulti] * segundo[indexSeg]}`)}
 }
 
-console.log(`${naoNeto}`)
