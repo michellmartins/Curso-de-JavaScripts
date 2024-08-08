@@ -1,15 +1,21 @@
-NumSort = [ 32 ,11, 54, 95 ,44, 22]
+let filhos = [ 'Michell', 'Allan', 'Priscilla']
 
-NumJog = [ 11, 54, 95, 44 , 22, 33, ]
+let netos = [ 'Erick', 'João Victor' , 'Milena' , 'Michell']
 
-NumAcer = []
+let naoNeto = []
 
-for (indexS = 0 ; indexS < NumSort.length ; indexS ++ ) 
-    for(indexJ = 0 ; indexJ < NumJog.length ; indexJ++) {
 
-        if (NumSort[indexS] === NumJog[indexJ]) {
+for ( indexFilhos = 0 ; indexFilhos < filhos.length ; indexFilhos++)  {
 
-            console.log(NumSort[indexS])
+    for (indexNetos = 0 ; indexNetos < netos.length ; indexNetos++)   {
+
+        if (filhos[indexFilhos] === netos[indexNetos]) {
+
+            naoNeto.push(filhos[indexFilhos])
+            
         }
-}   
-    
+
+ }
+}
+
+console.log(`${naoNeto}`)
