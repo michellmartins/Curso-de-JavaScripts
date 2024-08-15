@@ -35,6 +35,8 @@ function analisar () {
         item = document.createElement('option')
         item.text = `O valor é ${num.value}`
         lista.appendChild(item)
+        res.innerHTML = " "
+        
 
     
     }else {
@@ -82,17 +84,18 @@ function finalizar () {
         }
     }
 
+    res.innerHTML = " "
     res.innerHTML += `O valores digitados no toal foram ${total}`
     res.innerHTML += `<p> O maior valor é ${maior}`
     res.innerHTML += `<p> O menor valor é ${menor}`
     res.innerHTML += `<p> A soma dos valores é ${soma}`
     res.innerHTML += `<p> A média dos valores é ${media}`
-    res.innerHTML += `<p> Os valores digitados na ordem foram $`
+    res.innerHTML += `<p> Os valores digitados na ordem foram ${valores.sort().join(" - ")}`
+    res.innerHTML += `<p> Os valores digitados na ordem crescente são ${valores.sort((a,b) => a - b )}`
+
+
 
 
 
 }
 
-
-
- 

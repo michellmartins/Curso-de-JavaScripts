@@ -1,14 +1,20 @@
-let mult = [3, 7] 
-let segundo = [1,2,3,4,5,6,7,8,9,10]
+let megaSena = [ 1 , 23, 45, 11 , 74,  5]
+
+let jogados = [ 2 , 24 , 46 , 11, 73 , 5]
+
+let acertados = []
+
+for ( indexMega = 0 ; indexMega < megaSena.length ; indexMega++ ) {
+
+    for (indexJog = 0 ; indexJog < jogados.length ; indexJog++) {
+
+        if ( megaSena[indexMega] === jogados[indexJog]) {
+
+            acertados.push(megaSena[indexMega])
+        }
+    }
 
 
-
-for (indexMulti = 0 ; indexMulti < mult.length ; indexMulti++) {
-
-
-    for (indexSeg = 0 ; indexSeg < segundo.length ; indexSeg++) {
-
-        
-    console.log(`${mult[indexMulti]} x ${segundo[indexSeg]} = ${mult[indexMulti] * segundo[indexSeg]}`)}
 }
 
+console.log(acertados.join(" % "))
