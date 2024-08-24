@@ -1,13 +1,16 @@
-let mult = [ 3 , 7]
-let vezes = [ 1,2,3,4,5,6,7,8,9,10]
+let netos = [ 'Erick' , 'João' , 'Allana' , 'Milena']
 
+let repete = [ 'Erick' , 'Milena']
 
-for (indexM = 0 ; indexM < mult.length ; indexM++) {
-     
-    for (indexV = 0 ; indexV < vezes.length ; indexV++) {
+let igual = []
 
-    console.log(`${mult[indexM]} x ${vezes[indexV]} = ${mult[indexM] * vezes[indexV]} ` )
-    
+for (indexN = 0 ; indexN < netos.length ; indexN++ ) {
+
+    for ( indexR = 0 ; indexR < repete.length ; indexR++) 
+
+        if( netos[indexN] === repete[indexR])
+
+            igual.push(netos[indexN])
 }
 
-}
+console.log(igual)
