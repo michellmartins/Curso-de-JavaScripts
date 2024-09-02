@@ -3,23 +3,11 @@ let res = document.querySelector('#res')
 let lista = document.querySelector('#instab')
 let valores = []
 
-
 function insNumero(n) {
 
-    if(Number(n) >= 1 && Number(n) <= 100) {
-        
-        return true  
-    }else {
-
-        return false 
-    }
-}
-
-function insLista (n,l) {
-
-    if (l.indexOf(Number(n)) != -1 ) {
-
-        return true 
+    if (Number(n) >= 1 && Number(n) <= 100) {
+ 
+        return true
     
     }else {
 
@@ -27,24 +15,38 @@ function insLista (n,l) {
     }
 }
 
+function insLista(n,l) {
+
+    if (l.indexOf(Number(n)) != -1) {
+
+        return true 
+  
+    }else {
+
+        return false
+    }
+
+    
+}
+
+
 function analisar () {
 
     if (insNumero(num.value) && !insLista(num.value,valores)) {
 
         valores.push(Number(num.value))
         item = document.createElement('option')
-        item.text = `O valor é ${num.value}`
-        lista.add(item)
-    
+        item.text = ` O valor é ${num.value}`
+        lista.appendChild(item)
+        num.value = ' '
     }else {
 
-        alert ('Valor já inserido ou Invalido')
+        alert ('Valor ja inserido ou Invalido')
     }
 
-    num.value = ' '
-    num.focus()
-
-}
+num.value = ' '
+num.focus()
+} 
 
 function finalizar () {
 
@@ -55,40 +57,43 @@ function finalizar () {
     media = 0
 
 
-    if (total === 0 ) {
+    if ( total === 0) {
 
-        alert(' Favor digitar entre 0 q 100') 
-
+        alert (' Favor digitar entre 1 e 100')
+    
     }else {
 
-        for (pos in valores ) {
+        for ( pos in valores ) {
 
-            if (valores[pos] > maior ) {
+            if (valores[pos] > maior) {
 
                 maior = valores[pos]
-            }
+            } 
 
-            if (valores[pos] < menor) {
+            if (valores[pos] < menor)  {
 
                 menor = valores[pos]
-
             }
 
-            soma += valores[pos]
+            
+            soma = soma +  valores[pos]
             media = soma / total
-
-        }   
-        
-        res.innerHTML += `Os valores digitados no total foram ${total} valores`
-        res.innerHTML += `<p> O Maior valor é ${maior}`
-        res.innerHTML += `<p> O menor valor é ${menor}`
-        res.innerHTML += `<p> A soma dos valores é ${soma}`
-        res.innerHTML += `<p> A média dos valores é ${media}`
-        res.innerHTML += `<p> Os valores digitados na sequencia foram ${valores.join(' - ')}` 
-        res.innerHTML += `<p> Os valores digitados na ordem crescente é ${valores.sort((a,b) => a - b ).join(' * ')}`
-
-
-
-
+            
+            
+        }
     }
+
+    res.innerHTML += `O valores digitados no total foram ${total} digitados`
+    res.innerHTML += `<p>O maior valor é ${maior}`
+    res.innerHTML += `<p>O menor valor é ${menor}`    
+    res.innerHTML += `<p> A soma dos valores é ${soma}`
+    res.innerHTML += `<p> A média dos valores é ${media}`
+    res.innerHTML += `<p> Os valores digitados foram ${valores.join(' ¨ ')}`
+    res.innerHTML += `<p> Os valores digitados na ordem crescente são ${valores.sort((a,b) => a -b ).join('#')}`
+
+
+
+
+
+
 }
